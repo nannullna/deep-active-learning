@@ -1,0 +1,24 @@
+program: demo.py
+method: grid
+metric:
+  name: test/accuracy
+  goal: maximize
+parameters:
+  strategy_name:
+    values: [RandomSampling", 
+             "LeastConfidence", 
+             "MarginSampling", 
+             "EntropySampling", 
+             "LeastConfidenceDropout", 
+             "MarginSamplingDropout", 
+             "EntropySamplingDropout", 
+             "KMeansSampling",
+             "KCenterGreedy", 
+             "BALDDropout", 
+             "AdversarialBIM", 
+             "AdversarialDeepFool"]
+  dataset_name:
+    values: ["MNIST", "FashionMNIST", "SVHN", "CIFAR10"]
+  seed:
+    values: [42, 1528, 3027]
+project: dal
